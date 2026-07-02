@@ -36,19 +36,43 @@ Neo re-ran GSM8K full on Q8 at temperature 0.0. It took about 4 hours. The resul
 
 The model is a reasoning model. At temperature 0.6 it samples creative but wrong math answers. At temperature 0.0 it reasons greedily and correctly. The quantization had almost nothing to do with it.
 
+![GSM8K: Temperature comparison](reports/figures/gsm8k_temperature_comparison.png)
+
 ## What the Numbers Actually Say
 
-GSM8K: 84.31% at greedy decoding. This is solid for a 9B model. Qwen 3.5 9B base typically scores around 70-80% depending on setup. The fine tune might have helped a bit, or the eval setup might be slightly different. Either way, the number is real and reproducible.
+### GSM8K: 84.31% at greedy decoding
 
-IFEval: 66% prompt-level strict. Reasonable for a 9B on instruction following. Not extraordinary but not bad. The Q8 quantization gives about 4 points over Q4 -- measurable but not transformative.
+This is solid for a 9B model. Qwen 3.5 9B base typically scores around 70-80% depending on setup. The fine tune might have helped a bit, or the eval setup might be slightly different. Either way, the number is real and reproducible.
 
-HumanEval: 0%. This is a model capability issue, not a pipeline issue. The model was fine tuned for roleplay and reasoning, not code generation. It solves math problems but cannot write functions that compile. If you need code generation, use a different model.
+The important lesson is the chart above. If you run this model at temp 0.6 because "that's the standard sampling temperature," you see 21% and conclude the model is bad at math. Run it at 0.0 and you see 84%. Same model, same quant, same hardware, same evaluation script. The only difference is one parameter.
 
-HellaSwag and ARC: blocked by infrastructure. The Qwen 3.5 architecture is new enough that the existing tooling around GGUF and lm\_eval has not caught up. This is a real pain point. If you are evaluating recent models on loglikelihood tasks, you either need to use the HuggingFace tokenizer directly or wait for transformers to add architecture support.
+### IFEval: 66% prompt-level strict
+
+Q8 gives about 4 points over Q4 on prompt-level strict. The instruction-level metrics show a wider gap (+7.9pp on inst-level strict). This is measurable but not transformative. A 9B instruction following at 66% means the model follows most formatting constraints correctly but has room to improve on the harder ones.
+
+![IFEval: Q4 vs Q8 comparison](reports/figures/ifeval_comparison.png)
+
+### HumanEval: 0% pass@1 both quantizations
+
+This is a model capability issue, not a pipeline issue. The model was fine tuned for roleplay and reasoning, not code generation. It solves math problems but cannot write functions that compile. If you need code generation, use a different model.
+
+The Q8 extraction rate is slightly higher (26.8% vs 21.9%) meaning it produces code blocks more often, but none of them pass the test cases anyway.
+
+![HumanEval: Extraction rate vs pass@1](reports/figures/humaneval_comparison.png)
+
+### HellaSwag and ARC: blocked by infrastructure
+
+The Qwen 3.5 architecture is new enough that the existing tooling around GGUF and lm\_eval has not caught up. This is a real pain point. If you are evaluating recent models on loglikelihood tasks, you either need to use the HuggingFace tokenizer directly or wait for transformers to add architecture support. Neo tried three different backends and documented each failure before moving on.
+
+### Complete benchmark overview
+
+![All benchmarks: Q4 vs Q8](reports/figures/all_benchmarks_overview.png)
 
 ## Was Q8 Worth It?
 
 The Q8 GGUF is 8.9 GB. The Q4 is 5.2 GB. Thats 70% more disk space, VRAM, and bandwidth.
+
+![File size comparison](reports/figures/file_size_comparison.png)
 
 The improvement on IFEval was about 4 points. On HumanEval extraction rate, about 5 points. On GSM8K, zero difference at the same temperature.
 
@@ -56,13 +80,13 @@ If you are running this model in production, Q4 at temperature 0.0 is the right 
 
 ## Things That Would Have Broken Without an Autonomous Agent
 
-The `--reasoning-preserve` flag. If you forget this, the reasoning content goes to a separate API field and your benchmark sees blank responses. That would silently tank every score by 50-80%.
+**The `--reasoning-preserve` flag.** If you forget this, the reasoning content goes to a separate API field and your benchmark sees blank responses. That would silently tank every score by 50-80%.
 
-The logprobs format mismatch. The llama.cpp server returns logprobs in a nested content array. lm\_eval expects a flat `token_logprobs` list. This is a genuine compatibility gap between two actively maintained open source projects. Neo tried three workarounds before documenting it as blocked.
+**The logprobs format mismatch.** The llama.cpp server returns logprobs in a nested content array. lm\_eval expects a flat `token_logprobs` list. This is a genuine compatibility gap between two actively maintained open source projects. Neo tried three workarounds before documenting it as blocked.
 
-The IFEval implicit dependencies. `langdetect` and `immutabledict` are not listed as dependencies anywhere visible. They surface as ModuleNotFoundError at runtime and abort a multi-hour run if you are not watching it.
+**The IFEval implicit dependencies.** `langdetect` and `immutabledict` are not listed as dependencies anywhere visible. They surface as ModuleNotFoundError at runtime and abort a multi-hour run if you are not watching it.
 
-The temperature assumption. Running at 0.6 because "that's the standard sampling temperature" would have led to a report saying this model scores 21% on GSM8K. That would be wrong. The model scores 84%. The difference is entirely sampling strategy, which is usually left as a default and forgotten.
+**The temperature assumption.** Running at 0.6 because "that's the standard sampling temperature" would have led to a report saying this model scores 21% on GSM8K. That would be wrong. The model scores 84%. The difference is entirely sampling strategy, which is usually left as a default and forgotten.
 
 ## How You Can Build on This
 
