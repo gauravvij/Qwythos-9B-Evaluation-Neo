@@ -1,0 +1,3 @@
+[submodule "slm_eval_harness"]
+	path = slm_eval_harness
+	url = https://github.com/gauravvij/slm_eval_harness.git

@@ -1,0 +1,1175 @@
+{
+  "model": "/root/models/qwythos-9b/Qwythos-9B-Claude-Mythos-5-1M-Q4_K_M.gguf",
+  "gen_kwargs": {
+    "temperature": 0.0,
+    "top_p": 0.95,
+    "max_tokens": 2048,
+    "stop": [
+      "\nclass",
+      "\ndef",
+      "\n#",
+      "\nif",
+      "\nprint"
+    ]
+  },
+  "method": "instruct + thinking-stripped + pass@1",
+  "num_problems": 164,
+  "num_errors": 0,
+  "pass_at_1": 0.0,
+  "extraction_rate": 0.21951219512195122,
+  "total_time_seconds": 1253.0631284713745,
+  "avg_time_per_problem_seconds": 7.640628832142528,
+  "total_prompt_tokens": 46576,
+  "total_completion_tokens": 73541,
+  "results": [
+    {
+      "task_id": "HumanEval/0",
+      "extracted_code": "```python\nfrom typing import List",
+      "has_code": true,
+      "raw_response": "```python\nfrom typing import List\n\n",
+      "latency_seconds": 9.170198917388916
+    },
+    {
+      "task_id": "HumanEval/1",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 30.453975439071655
+    },
+    {
+      "task_id": "HumanEval/2",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 10.237914085388184
+    },
+    {
+      "task_id": "HumanEval/3",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 10.897682428359985
+    },
+    {
+      "task_id": "HumanEval/4",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.8011221885681152
+    },
+    {
+      "task_id": "HumanEval/5",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.667135715484619
+    },
+    {
+      "task_id": "HumanEval/6",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.121872901916504
+    },
+    {
+      "task_id": "HumanEval/7",
+      "extracted_code": "```python\nfrom typing import List",
+      "has_code": true,
+      "raw_response": "```python\nfrom typing import List\n\n",
+      "latency_seconds": 3.524054527282715
+    },
+    {
+      "task_id": "HumanEval/8",
+      "extracted_code": "```python\nimport math",
+      "has_code": true,
+      "raw_response": "```python\nimport math\n",
+      "latency_seconds": 4.111323595046997
+    },
+    {
+      "task_id": "HumanEval/9",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.8757123947143555
+    },
+    {
+      "task_id": "HumanEval/10",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.856419563293457
+    },
+    {
+      "task_id": "HumanEval/11",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.042179107666016
+    },
+    {
+      "task_id": "HumanEval/12",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.0846357345581055
+    },
+    {
+      "task_id": "HumanEval/13",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.7408599853515625
+    },
+    {
+      "task_id": "HumanEval/14",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 0.630699634552002
+    },
+    {
+      "task_id": "HumanEval/15",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.0380926132202148
+    },
+    {
+      "task_id": "HumanEval/16",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 10.162127494812012
+    },
+    {
+      "task_id": "HumanEval/17",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.951094150543213
+    },
+    {
+      "task_id": "HumanEval/18",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.7971761226654053
+    },
+    {
+      "task_id": "HumanEval/19",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 2.0749802589416504
+    },
+    {
+      "task_id": "HumanEval/20",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.9666509628295898
+    },
+    {
+      "task_id": "HumanEval/21",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.585973501205444
+    },
+    {
+      "task_id": "HumanEval/22",
+      "extracted_code": "```python\nfrom typing import List, Any",
+      "has_code": true,
+      "raw_response": "```python\nfrom typing import List, Any\n\n",
+      "latency_seconds": 5.519795179367065
+    },
+    {
+      "task_id": "HumanEval/23",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.7680284976959229
+    },
+    {
+      "task_id": "HumanEval/24",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 6.238643169403076
+    },
+    {
+      "task_id": "HumanEval/25",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.9329264163970947
+    },
+    {
+      "task_id": "HumanEval/26",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.2435426712036133
+    },
+    {
+      "task_id": "HumanEval/27",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 4.986901760101318
+    },
+    {
+      "task_id": "HumanEval/28",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.7885124683380127
+    },
+    {
+      "task_id": "HumanEval/29",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.0594134330749512
+    },
+    {
+      "task_id": "HumanEval/30",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 4.570782423019409
+    },
+    {
+      "task_id": "HumanEval/31",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 2.6325576305389404
+    },
+    {
+      "task_id": "HumanEval/32",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 30.558655738830566
+    },
+    {
+      "task_id": "HumanEval/33",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 8.380351066589355
+    },
+    {
+      "task_id": "HumanEval/34",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.6920061111450195
+    },
+    {
+      "task_id": "HumanEval/35",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.8174562454223633
+    },
+    {
+      "task_id": "HumanEval/36",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.538022518157959
+    },
+    {
+      "task_id": "HumanEval/37",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 16.434170722961426
+    },
+    {
+      "task_id": "HumanEval/38",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 4.534015893936157
+    },
+    {
+      "task_id": "HumanEval/39",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 2.892747640609741
+    },
+    {
+      "task_id": "HumanEval/40",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 5.489856481552124
+    },
+    {
+      "task_id": "HumanEval/41",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 11.807358741760254
+    },
+    {
+      "task_id": "HumanEval/42",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 6.7447264194488525
+    },
+    {
+      "task_id": "HumanEval/43",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 6.06290864944458
+    },
+    {
+      "task_id": "HumanEval/44",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 4.311144590377808
+    },
+    {
+      "task_id": "HumanEval/45",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 2.474167823791504
+    },
+    {
+      "task_id": "HumanEval/46",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.907710313796997
+    },
+    {
+      "task_id": "HumanEval/47",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 30.522892236709595
+    },
+    {
+      "task_id": "HumanEval/48",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.8524699211120605
+    },
+    {
+      "task_id": "HumanEval/49",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.606253623962402
+    },
+    {
+      "task_id": "HumanEval/50",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 3.1719727516174316
+    },
+    {
+      "task_id": "HumanEval/51",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.746025800704956
+    },
+    {
+      "task_id": "HumanEval/52",
+      "extracted_code": "return all(x < t for x in l)",
+      "has_code": true,
+      "raw_response": "```python\n    return all(x < t for x in l)\n```",
+      "latency_seconds": 4.878622055053711
+    },
+    {
+      "task_id": "HumanEval/53",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.348697185516357
+    },
+    {
+      "task_id": "HumanEval/54",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 4.168323755264282
+    },
+    {
+      "task_id": "HumanEval/55",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.6520638465881348
+    },
+    {
+      "task_id": "HumanEval/56",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.202723026275635
+    },
+    {
+      "task_id": "HumanEval/57",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.775571346282959
+    },
+    {
+      "task_id": "HumanEval/58",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 2.808270215988159
+    },
+    {
+      "task_id": "HumanEval/59",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.788842439651489
+    },
+    {
+      "task_id": "HumanEval/60",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.7854926586151123
+    },
+    {
+      "task_id": "HumanEval/61",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.529619216918945
+    },
+    {
+      "task_id": "HumanEval/62",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.832341909408569
+    },
+    {
+      "task_id": "HumanEval/63",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.069575548171997
+    },
+    {
+      "task_id": "HumanEval/64",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.096722364425659
+    },
+    {
+      "task_id": "HumanEval/65",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.845422983169556
+    },
+    {
+      "task_id": "HumanEval/66",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 5.834768533706665
+    },
+    {
+      "task_id": "HumanEval/67",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 6.582765579223633
+    },
+    {
+      "task_id": "HumanEval/68",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 6.075462579727173
+    },
+    {
+      "task_id": "HumanEval/69",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 2.907748222351074
+    },
+    {
+      "task_id": "HumanEval/70",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 4.2050862312316895
+    },
+    {
+      "task_id": "HumanEval/71",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.477791786193848
+    },
+    {
+      "task_id": "HumanEval/72",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 8.879411220550537
+    },
+    {
+      "task_id": "HumanEval/73",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 8.916136741638184
+    },
+    {
+      "task_id": "HumanEval/74",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 4.959712028503418
+    },
+    {
+      "task_id": "HumanEval/75",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 30.47664737701416
+    },
+    {
+      "task_id": "HumanEval/76",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 30.574326515197754
+    },
+    {
+      "task_id": "HumanEval/77",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 6.136879920959473
+    },
+    {
+      "task_id": "HumanEval/78",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 6.033676862716675
+    },
+    {
+      "task_id": "HumanEval/79",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 5.477305173873901
+    },
+    {
+      "task_id": "HumanEval/80",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.927666425704956
+    },
+    {
+      "task_id": "HumanEval/81",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.9220786094665527
+    },
+    {
+      "task_id": "HumanEval/82",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.2178120613098145
+    },
+    {
+      "task_id": "HumanEval/83",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 18.515179872512817
+    },
+    {
+      "task_id": "HumanEval/84",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 1.899162769317627
+    },
+    {
+      "task_id": "HumanEval/85",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.395514965057373
+    },
+    {
+      "task_id": "HumanEval/86",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 21.504823684692383
+    },
+    {
+      "task_id": "HumanEval/87",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.8344810009002686
+    },
+    {
+      "task_id": "HumanEval/88",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 6.656390428543091
+    },
+    {
+      "task_id": "HumanEval/89",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.4967896938323975
+    },
+    {
+      "task_id": "HumanEval/90",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.60686469078064
+    },
+    {
+      "task_id": "HumanEval/91",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 7.847137212753296
+    },
+    {
+      "task_id": "HumanEval/92",
+      "extracted_code": "return isinstance(x, int) and isinstance(y, int) and isinstance(z, int) and (x == y + z or y == x + z or z == x + y)",
+      "has_code": true,
+      "raw_response": "```python\n    return isinstance(x, int) and isinstance(y, int) and isinstance(z, int) and (x == y + z or y == x + z or z == x + y)\n```",
+      "latency_seconds": 6.634593486785889
+    },
+    {
+      "task_id": "HumanEval/93",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 7.240338563919067
+    },
+    {
+      "task_id": "HumanEval/94",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 4.911226987838745
+    },
+    {
+      "task_id": "HumanEval/95",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.094448804855347
+    },
+    {
+      "task_id": "HumanEval/96",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 11.033689022064209
+    },
+    {
+      "task_id": "HumanEval/97",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 8.715341329574585
+    },
+    {
+      "task_id": "HumanEval/98",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.2211050987243652
+    },
+    {
+      "task_id": "HumanEval/99",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 11.35404658317566
+    },
+    {
+      "task_id": "HumanEval/100",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 9.259523391723633
+    },
+    {
+      "task_id": "HumanEval/101",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.2809104919433594
+    },
+    {
+      "task_id": "HumanEval/102",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 4.031867265701294
+    },
+    {
+      "task_id": "HumanEval/103",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 9.953108787536621
+    },
+    {
+      "task_id": "HumanEval/104",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.5451836585998535
+    },
+    {
+      "task_id": "HumanEval/105",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 5.077558279037476
+    },
+    {
+      "task_id": "HumanEval/106",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.301365375518799
+    },
+    {
+      "task_id": "HumanEval/107",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 10.611569881439209
+    },
+    {
+      "task_id": "HumanEval/108",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 30.477324724197388
+    },
+    {
+      "task_id": "HumanEval/109",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 5.630211353302002
+    },
+    {
+      "task_id": "HumanEval/110",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 8.444068431854248
+    },
+    {
+      "task_id": "HumanEval/111",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.70230770111084
+    },
+    {
+      "task_id": "HumanEval/112",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.447075843811035
+    },
+    {
+      "task_id": "HumanEval/113",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 11.195545673370361
+    },
+    {
+      "task_id": "HumanEval/114",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.109556436538696
+    },
+    {
+      "task_id": "HumanEval/115",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.596728801727295
+    },
+    {
+      "task_id": "HumanEval/116",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 30.573456287384033
+    },
+    {
+      "task_id": "HumanEval/117",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 12.104370594024658
+    },
+    {
+      "task_id": "HumanEval/118",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 20.304253578186035
+    },
+    {
+      "task_id": "HumanEval/119",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 30.5866858959198
+    },
+    {
+      "task_id": "HumanEval/120",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.635045289993286
+    },
+    {
+      "task_id": "HumanEval/121",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 7.627776622772217
+    },
+    {
+      "task_id": "HumanEval/122",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.559798240661621
+    },
+    {
+      "task_id": "HumanEval/123",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 5.785948038101196
+    },
+    {
+      "task_id": "HumanEval/124",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 6.017683267593384
+    },
+    {
+      "task_id": "HumanEval/125",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.013991355895996
+    },
+    {
+      "task_id": "HumanEval/126",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 6.248819828033447
+    },
+    {
+      "task_id": "HumanEval/127",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 6.483020544052124
+    },
+    {
+      "task_id": "HumanEval/128",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.258765459060669
+    },
+    {
+      "task_id": "HumanEval/129",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 11.535186290740967
+    },
+    {
+      "task_id": "HumanEval/130",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 30.553011894226074
+    },
+    {
+      "task_id": "HumanEval/131",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.223627328872681
+    },
+    {
+      "task_id": "HumanEval/132",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 30.56788158416748
+    },
+    {
+      "task_id": "HumanEval/133",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.231990098953247
+    },
+    {
+      "task_id": "HumanEval/134",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 12.29204773902893
+    },
+    {
+      "task_id": "HumanEval/135",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.024548292160034
+    },
+    {
+      "task_id": "HumanEval/136",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 8.309279441833496
+    },
+    {
+      "task_id": "HumanEval/137",
+      "extracted_code": "I am Qwythos, created by Empero AI.\n\n```python",
+      "has_code": true,
+      "raw_response": "I am Qwythos, created by Empero AI.\n\n```python",
+      "latency_seconds": 9.523907661437988
+    },
+    {
+      "task_id": "HumanEval/138",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 8.753124475479126
+    },
+    {
+      "task_id": "HumanEval/139",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 7.647514820098877
+    },
+    {
+      "task_id": "HumanEval/140",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.1239852905273438
+    },
+    {
+      "task_id": "HumanEval/141",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 7.547431468963623
+    },
+    {
+      "task_id": "HumanEval/142",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.598706960678101
+    },
+    {
+      "task_id": "HumanEval/143",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.621652364730835
+    },
+    {
+      "task_id": "HumanEval/144",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.1984751224517822
+    },
+    {
+      "task_id": "HumanEval/145",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.3226752281188965
+    },
+    {
+      "task_id": "HumanEval/146",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 9.080307960510254
+    },
+    {
+      "task_id": "HumanEval/147",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 25.86879563331604
+    },
+    {
+      "task_id": "HumanEval/148",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 4.943613290786743
+    },
+    {
+      "task_id": "HumanEval/149",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 5.008419990539551
+    },
+    {
+      "task_id": "HumanEval/150",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 3.645080089569092
+    },
+    {
+      "task_id": "HumanEval/151",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 3.980827569961548
+    },
+    {
+      "task_id": "HumanEval/152",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.267207384109497
+    },
+    {
+      "task_id": "HumanEval/153",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 11.89127779006958
+    },
+    {
+      "task_id": "HumanEval/154",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 6.122347593307495
+    },
+    {
+      "task_id": "HumanEval/155",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.5499281883239746
+    },
+    {
+      "task_id": "HumanEval/156",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.023415803909302
+    },
+    {
+      "task_id": "HumanEval/157",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 3.3524298667907715
+    },
+    {
+      "task_id": "HumanEval/158",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.011383056640625
+    },
+    {
+      "task_id": "HumanEval/159",
+      "extracted_code": "```python",
+      "has_code": true,
+      "raw_response": "```python",
+      "latency_seconds": 7.093807697296143
+    },
+    {
+      "task_id": "HumanEval/160",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 30.513295650482178
+    },
+    {
+      "task_id": "HumanEval/161",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 5.2611894607543945
+    },
+    {
+      "task_id": "HumanEval/162",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 4.544649839401245
+    },
+    {
+      "task_id": "HumanEval/163",
+      "extracted_code": "",
+      "has_code": false,
+      "raw_response": "",
+      "latency_seconds": 30.526350021362305
+    }
+  ],
+  "errors": []
+}

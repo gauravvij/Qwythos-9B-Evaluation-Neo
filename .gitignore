@@ -1,0 +1,34 @@
+# Large model files (GGUF)
+*.gguf
+*.gguf.part
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/tmp/
+
+# Large binary artifacts
+llama.cpp/

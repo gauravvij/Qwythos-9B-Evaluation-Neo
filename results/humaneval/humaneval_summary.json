@@ -1,0 +1,25 @@
+{
+  "model": "/root/models/qwythos-9b/Qwythos-9B-Claude-Mythos-5-1M-Q8_0.gguf",
+  "api_url": "http://localhost:8081/v1/chat/completions",
+  "gen_kwargs": {
+    "temperature": 0.0,
+    "top_p": 0.95,
+    "max_tokens": 2048,
+    "stop": [
+      "\nclass",
+      "\ndef",
+      "\n#",
+      "\nif",
+      "\nprint"
+    ]
+  },
+  "method": "instruct + thinking-stripped + pass@1",
+  "num_problems": 164,
+  "num_errors": 0,
+  "pass_at_1": 0.0,
+  "extraction_rate": 0.2682926829268293,
+  "total_time_seconds": 2110.721308708191,
+  "avg_time_per_problem_seconds": 12.870251882367018,
+  "total_prompt_tokens": 46576,
+  "total_completion_tokens": 85963
+}
