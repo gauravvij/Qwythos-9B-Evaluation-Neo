@@ -1,4 +1,6 @@
-# Qwythos-9B Evaluation — Autonomous AI Engineering by Neo
+# Qwythos-9B Evaluation
+
+<a href="https://heyneo.com/?ref=qwythosgit" target="_blank"><img src="https://img.shields.io/badge/Evaluated%20using-Neo%20AI%20Engineer-black?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHJ4PSIzIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==" alt="Evaluated using Neo AI Engineer" /></a>
 
 This repo contains a complete evaluation of [Qwythos-9B-Claude-Mythos-5-1M](https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF), a Qwen3.5-9B based reasoning model, across multiple benchmarks at two different quantization levels (Q4\_K\_M and Q8\_0).
 
@@ -54,7 +56,7 @@ All evaluation infrastructure is in `slm_eval_harness/` and the custom HumanEval
 - `slm_eval_harness/` — evaluation framework with components for config, checkpointing, parsing
 - `results/` — raw result JSON files for all benchmarks
 
-## What is Neo?
+## What is <a href="https://heyneo.com/?ref=qwythosgit" target="_blank">Neo</a>?
 
 Neo is an autonomous AI Engineering Agent. You give it a goal, and it handles everything else: researching approaches, setting up environments, writing code, running experiments, debugging failures, iterating, and delivering results. It works in VS Code or Cursor as an extension.
 
