@@ -1,4 +1,6 @@
-# Evaluating a 9B Reasoning Model End to End: What It Actually Looks Like When an AI Engineer Does the Work
+# Qwythos-9B Evaluation: Benchmarking a 9B Reasoning Model on GSM8K, IFEval, and HumanEval
+
+![Qwythos-9B Evaluation Header](reports/figures/blog_header.png)
 
 I wanted to know how good this model called Qwythos-9B really is. Its a fine tune of Qwen 3.5 9B that was merged with some Claude distillation data. The GGUF files were on HuggingFace. Two quantizations available: Q4_K_M and Q8_0. I had a 16 GB RTX 5060 Ti and a hunch that most open source evaluations you see online are either cherry picked or run with wrong settings.
 

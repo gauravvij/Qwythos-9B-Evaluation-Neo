@@ -59,6 +59,14 @@ ax.text(4.0, 2.1, 'An Autonomous AI Engineering Case Study',
         color='#B0B8D0', ha='center', va='center',
         alpha=0.85, fontstyle='italic')
 
+# Benchmark names row
+ax.text(4.0, 1.75, 'GSM8K  \u2022  IFEval  \u2022  HumanEval',
+        fontsize=11, fontfamily='sans-serif',
+        color='#8890AA', ha='center', va='center', alpha=0.75)
+
+# Subtle divider line above benchmark names
+ax.plot([2.0, 6.0], [1.95, 1.95], color='#B0B8D0', alpha=0.12, linewidth=0.5)
+
 # Quantization label
 ax.text(7.2, 0.3, 'Q4_K_M  |  Q8_0',
         fontsize=9, fontfamily='sans-serif',
