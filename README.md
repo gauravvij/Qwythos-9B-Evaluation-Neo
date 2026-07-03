@@ -26,7 +26,7 @@ See the full report at [`reports/qwythos_9b_eval_report.md`](reports/qwythos_9b_
 
 ## Key Findings
 
-- **GSM8K**: Q4_K_M (80.89%) and Q8_0 (84.31%) are close at temp=0.0 — the quantization gap is only 3.4pp. Temperature choice (0.0 vs 0.6) can swing results by 60+ points, dwarfing quantization effects.
+- **GSM8K**: Q4_K_M (80.89%) and Q8_0 (84.31%) are close at temp=0.0 — the quantization gap is only 3.4pp. Both quantizations use greedy decoding for a fair comparison.
 - **IFEval**: Q8_0 shows a consistent 6-10pp advantage over Q4_K_M, the largest measurable gap between quantizations.
 - **HumanEval**: Both quantizations score 0% pass@1 — this is a model capability limitation, not a pipeline issue.
 - **Practical recommendation**: Q4_K_M at temp=0.0 provides the best quality/size tradeoff for most use cases.

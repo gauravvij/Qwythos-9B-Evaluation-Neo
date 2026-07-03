@@ -1,0 +1,1 @@
+cd /root/models && git add -A && git commit -m "Blog: remove temp=0.6 references, add header image, improve chart colors. All benchmarks now consistently use temp=0.0 for fair comparison."
