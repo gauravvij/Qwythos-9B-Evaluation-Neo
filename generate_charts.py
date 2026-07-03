@@ -17,17 +17,17 @@ output_dir = '/root/models/reports/figures'
 import os
 os.makedirs(output_dir, exist_ok=True)
 
-# ── Chart 1: GSM8K Q4 vs Q8 (the temperature story) ──
+# ── Chart 1: GSM8K Q4 vs Q8 (both at temp=0.0) ──
 fig, ax = plt.subplots(figsize=(8, 5))
-categories = ['Q4_K_M\ntemp=0.6', 'Q8_0\ntemp=0.6', 'Q8_0\ntemp=0.0']
-flex = [23.28, 21.38, 84.31]
-strict = [19.71, 18.12, 83.24]
+categories = ['Q4_K_M\ntemp=0.0', 'Q8_0\ntemp=0.0']
+flex = [80.89, 84.31]
+strict = [80.29, 83.24]
 x = np.arange(len(categories))
 w = 0.35
 bars1 = ax.bar(x - w/2, flex, w, label='Flexible-extract', color='#4a90d9', edgecolor='white', linewidth=0.5)
 bars2 = ax.bar(x + w/2, strict, w, label='Strict-match', color='#7b68ee', edgecolor='white', linewidth=0.5)
 ax.set_ylabel('Accuracy (%)')
-ax.set_title('GSM8K: Temperature Dominates, Not Quantization', fontweight='bold')
+ax.set_title('GSM8K: Q4 vs Q8 at Temperature 0.0 (Fair Comparison)', fontweight='bold')
 ax.set_xticks(x)
 ax.set_xticklabels(categories)
 ax.legend(loc='upper left', framealpha=0.9)
@@ -38,22 +38,29 @@ for bar in bars1:
 for bar in bars2:
     ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 1.5, f'{bar.get_height():.1f}%',
             ha='center', va='bottom', fontsize=10, fontweight='bold')
+# delta annotation
+delta_flex = flex[1] - flex[0]
+delta_strict = strict[1] - strict[0]
+ax.annotate(f'Δ flex: +{delta_flex:.1f}pp\nΔ strict: +{delta_strict:.1f}pp',
+            xy=(1, max(flex)), xytext=(0.5, 92),
+            fontsize=10, fontweight='bold', ha='center', color='#2d6a2d',
+            bbox=dict(boxstyle='round,pad=0.3', facecolor='#e8f5e9', edgecolor='none', alpha=0.8))
 fig.tight_layout()
 fig.savefig(f'{output_dir}/gsm8k_temperature_comparison.png', dpi=150)
 plt.close(fig)
 print(f'Generated gsm8k_temperature_comparison.png')
 
-# ── Chart 2: IFEval Q4 vs Q8 ──
+# ── Chart 2: IFEval Q4 vs Q8 (both at temp=0.0) ──
 fig, ax = plt.subplots(figsize=(8, 5))
 metrics = ['prompt_level\nstrict', 'prompt_level\nloose', 'inst_level\nstrict', 'inst_level\nloose']
-q4_ifeval = [62.0, 66.0, 61.84, 65.79]
+q4_ifeval = [60.0, 60.0, 60.53, 60.53]
 q8_ifeval = [66.0, 68.0, 69.74, 71.05]
 x = np.arange(len(metrics))
 w = 0.35
-bars1 = ax.bar(x - w/2, q4_ifeval, w, label='Q4_K_M (temp=0.6)', color='#e8856b', edgecolor='white', linewidth=0.5)
+bars1 = ax.bar(x - w/2, q4_ifeval, w, label='Q4_K_M (temp=0.0)', color='#e8856b', edgecolor='white', linewidth=0.5)
 bars2 = ax.bar(x + w/2, q8_ifeval, w, label='Q8_0 (temp=0.0)', color='#5cb85c', edgecolor='white', linewidth=0.5)
 ax.set_ylabel('Accuracy (%)')
-ax.set_title('IFEval: Instruction Following Comparison', fontweight='bold')
+ax.set_title('IFEval: Q4 vs Q8 at Temperature 0.0 (Fair Comparison)', fontweight='bold')
 ax.set_xticks(x)
 ax.set_xticklabels(metrics)
 ax.legend(loc='lower right', framealpha=0.9)
@@ -105,17 +112,17 @@ fig.savefig(f'{output_dir}/humaneval_comparison.png', dpi=150)
 plt.close(fig)
 print(f'Generated humaneval_comparison.png')
 
-# ── Chart 4: All benchmarks side by side (key metrics only) ──
+# ── Chart 4: All benchmarks side by side (both at temp=0.0) ──
 fig, ax = plt.subplots(figsize=(9, 5.5))
 benchmarks = ['GSM8K\n(flex-extract)', 'IFEval\n(prompt strict)', 'HumanEval\n(pass@1)']
-q4_scores = [23.28, 62.0, 0.0]
+q4_scores = [80.89, 60.0, 0.0]
 q8_scores = [84.31, 66.0, 0.0]
 x = np.arange(len(benchmarks))
 w = 0.35
-bars1 = ax.bar(x - w/2, q4_scores, w, label='Q4_K_M', color='#e8856b', edgecolor='white', linewidth=0.5)
-bars2 = ax.bar(x + w/2, q8_scores, w, label='Q8_0', color='#5cb85c', edgecolor='white', linewidth=0.5)
+bars1 = ax.bar(x - w/2, q4_scores, w, label='Q4_K_M (temp=0.0)', color='#e8856b', edgecolor='white', linewidth=0.5)
+bars2 = ax.bar(x + w/2, q8_scores, w, label='Q8_0 (temp=0.0)', color='#5cb85c', edgecolor='white', linewidth=0.5)
 ax.set_ylabel('Score (%)')
-ax.set_title('Qwythos-9B: Q4_K_M vs Q8_0 — All Benchmarks', fontweight='bold')
+ax.set_title('Qwythos-9B: Q4_K_M vs Q8_0 — All Benchmarks at Temp 0.0', fontweight='bold')
 ax.set_xticks(x)
 ax.set_xticklabels(benchmarks)
 ax.legend(loc='upper left', framealpha=0.9)
@@ -127,8 +134,8 @@ for bar in bars2:
     ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 1.5, f'{bar.get_height():.1f}%',
             ha='center', va='bottom', fontsize=10, fontweight='bold')
 # footnote
-ax.text(0.5, -8, 'GSM8K Q4 at temp=0.6, Q8 at temp=0.0  |  IFEval Q4 at temp=0.6, Q8 at temp=0.0  |  HumanEval both at temp=0.0',
-        ha='center', va='top', fontsize=8.5, fontstyle='italic', color='#666',
+ax.text(0.5, -8, 'All benchmarks at temperature=0.0 (greedy decoding) for both quantizations',
+        ha='center', va='top', fontsize=9, fontstyle='italic', color='#666',
         transform=ax.transData)
 fig.tight_layout()
 fig.savefig(f'{output_dir}/all_benchmarks_overview.png', dpi=150)

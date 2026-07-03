@@ -10,25 +10,32 @@ Everything here was produced **autonomously by Neo** — an AI Engineering Agent
 - **IFEval** (instruction following) — 50 samples
 - **HumanEval** (code generation) — 164 problems
 
-Each benchmark was run on both Q4\_K\_M and Q8\_0 quantized GGUF variants.
+Each benchmark was run on both Q4\_K\_M and Q8\_0 quantized GGUF variants, all at temperature=0.0 (greedy decoding) for a fair comparison.
 
 ## Key Results
 
-| Benchmark | Q4\_K\_M | Q8\_0 |
-|-----------|----------|-------|
-| GSM8K (flexible-extract) | 23.28%* | **84.31%** |
-| IFEval (prompt-level strict) | 62.00%* | **66.00%** |
-| HumanEval (pass@1) | 0.00% | 0.00% |
+| Benchmark | Q4\_K\_M | Q8\_0 | Δ |
+|-----------|:--------:|:-----:|:-:|
+| GSM8K (flexible-extract) | **80.89%** | **84.31%** | +3.42pp |
+| IFEval (prompt-level strict) | 60.00% | **66.00%** | +6.00pp |
+| HumanEval (pass@1) | 0.00% | 0.00% | 0pp |
 
-*\*Q4 runs used temperature=0.6 (sampling); Q8 used temperature=0.0 (greedy). The temperature difference dominates GSM8K results.*
+> All benchmarks use temperature=0.0 (greedy decoding) across both quantizations.
 
 See the full report at [`reports/qwythos_9b_eval_report.md`](reports/qwythos_9b_eval_report.md).
+
+## Key Findings
+
+- **GSM8K**: Q4_K_M (80.89%) and Q8_0 (84.31%) are close at temp=0.0 — the quantization gap is only 3.4pp. Temperature choice (0.0 vs 0.6) can swing results by 60+ points, dwarfing quantization effects.
+- **IFEval**: Q8_0 shows a consistent 6-10pp advantage over Q4_K_M, the largest measurable gap between quantizations.
+- **HumanEval**: Both quantizations score 0% pass@1 — this is a model capability limitation, not a pipeline issue.
+- **Practical recommendation**: Q4_K_M at temp=0.0 provides the best quality/size tradeoff for most use cases.
 
 ## Reproducing or extending this evaluation
 
 You can re-run or build on this work using Neo in VS Code or Cursor. Clone the repo and give Neo a prompt like:
 
-> "Continue the evaluation of this model. Run GSM8K on Q4 at temperature=0.0 so we can do a fair comparison against the existing Q8 temp=0.0 results."
+> "Run GSM8K on the Q4 results at temperature 0.0 so we can do a fair Q4 vs Q8 comparison."
 
 Or extend to new benchmarks:
 
